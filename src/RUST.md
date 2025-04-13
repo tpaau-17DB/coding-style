@@ -3,14 +3,12 @@ Coding Style: Rust
 </h1>
 
 Rust is rather strict about coding style, although it still allows developers
-to use a coding style they like. To maintain a consistent style over the entire
-codebase, I listed all of my coding preferences for Rust in here.
+to customize how their code looks.
 
 
 #### Prefer Explicit Returns
-Use explicit returns. Implicit returns make the code **unreadable**. Implicit
-returns are only fine when we are returning a value in a single-line match
-arms: 
+Use explicit returns. Implicit returns make the code **unreadable**. They are
+only fine when we are returning a value in single-line match arms: 
 ```rust
 fn check_condition(flag: bool) -> String {
     match flag {
@@ -21,10 +19,10 @@ fn check_condition(flag: bool) -> String {
 ```
 
 #### Whitespace
-Too much whitespace is better than too little, in my opinion. Code with too
-little whitespace is hard to read. Use up to two newlines to separate a
-function or a class from one another. Don't stack `if/else` blocks on
-each other with little or no newlines like many LLMs do:
+Too much whitespace is better than too little - in my opinion. Code with too
+little whitespace is hard to read. Use up to two newlines to separate code
+blocks. Don't stack `if/else` blocks on each other with little newlines like
+many LLMs do:
 ```rust
 // This is insane
 if some_condition {
@@ -46,6 +44,21 @@ else {
 }
 ```
 Isn't this better?
+
+For reference, here is an example of what I usually do in C-likes:
+```c++
+bool some_function(string str)
+{
+    if (str == "asdfasdf")
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+```
 
 
 #### Imports
