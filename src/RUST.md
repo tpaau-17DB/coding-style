@@ -7,39 +7,18 @@ to use a coding style they like. To maintain a consistent style over the entire
 codebase, I listed all of my coding preferences for Rust in here.
 
 
-#### Returns
+#### Prefer Explicit Returns
 Use explicit returns. Implicit returns make the code **unreadable**. Implicit
-returns are only fine when we are returning a value as we are wrapping it in a
-`Result` enum.
-
-For example this is fine:
+returns are only fine when we are returning a value in a single-line match
+arms: 
 ```rust
-fn check_condition(flag: bool) -> Result<(), &'static str> {
+fn check_condition(flag: bool) -> String {
     match flag {
-        true => Ok(()),
-        false => Err("Bad, bad bad!"),
+        true => String::from("true"),
+        false => String::from("false"),
     }
 }
 ```
-In this case we don't need to use the `return` keyword since we are returning
-a value as we are wrapping it in a `Result`.
-
-And this is not fine:
-```rust
-fn another_function(a: i32, b: i32) {
-    a + b
-}
-```
-Here we **must** use the `return` keyword as we are not wrapping the result in
-`Result`.
-
-So here is the corrected version of the second example:
-```rust
-fn corrected_function(a: i32, b: i32) {
-    return a + b
-}
-```
-
 
 #### Whitespace
 Too much whitespace is better than too little, in my opinion. Code with too
