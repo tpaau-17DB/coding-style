@@ -1,5 +1,5 @@
 <h1 align="center">
-Coding Style
+Coding Style: Rust
 </h1>
 
 Rust is rather strict about coding style, although it still allows developers
