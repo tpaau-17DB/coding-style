@@ -69,11 +69,8 @@ use module::{Element, function};
 
 
 ## Indentation
-Use one tab as a single indentation level. Regular space characters are
-unacceptable as they make indentation impossible to customize.
+Use one tab.
 
 
 ## Line Length
-Lines should be no more than 80 characters in length. In some rare cases this
-limit can be exceeded, like when pasting an url or other string that can't be
-broken up into smaller elements.
+No more than 80 characters. This is more of a guideline than a strict rule, it's OK to exceed the 80 character limit if necessary, for example in an inseparable string.
