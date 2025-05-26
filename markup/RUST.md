@@ -58,7 +58,7 @@ else
 
 
 ## Imports
-Don't use wildcards in imports unless you have something to hide:
+Don't use wildcards and don't rename imported libraries unless absolutely necessary:
 ```rust
 // Bad:
 use module::*;
