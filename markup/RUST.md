@@ -73,4 +73,4 @@ Use one tab.
 
 
 ## Line Length
-No more than 80 characters. This is more of a guideline than a strict rule, it's OK to exceed the 80 character limit if necessary, for example in an inseparable string.
+Try not to exceed the 80 characters column limit.
